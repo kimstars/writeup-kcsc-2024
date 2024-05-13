@@ -219,3 +219,49 @@ Bài này khá dễ . Dùng tool parse thời gian ra luôn https://dfir.blog/un
 
 
 
+
+
+- Hàm Main
+
+![image-20240513211552443](./image/image-20240513211552443.png)
+
+
+
+:v Có vẻ là mã hóa thông thường rồi **compare** . Nhưng đề bài có vẻ bất ổn nên mình không tin nó đơn giản như này
+
+
+
+- Lướt đi xem cách hàm khác...
+
+![image-20240513211755400](./image/image-20240513211755400.png)
+
+
+
+Gặp ngay chương trình đang thực hiện hook vào hàm **lstrcmpA** - theo mình đoán z :3
+
+Xem qua  chương trình không thấy gì nguy hiểm, mình thực hiện debug luôn
+
+![image-20240513212043728](./image/image-20240513212043728.png)
+
+
+
+Đặt bp tại dòng so sánh rồi F7 nhảy vào hàm thôi..
+
+
+
+![image-20240513212152796](./image/image-20240513212152796.png)
+
+
+
+Đặt tiếp bp trong hàm hook để xem giá trị  -> F9
+
+Flag ở V5 này rồi :v 
+
+![image-20240513212238528](./image/image-20240513212238528.png)
+
+
+
+***KCSC{1t_co5ld_be_right7_fla9_here_^.^@@}***
+
+
+
